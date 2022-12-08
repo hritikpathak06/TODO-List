@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: white;
+    background: linear-gradient(red,black,blue);
+}
+
+header{
+    padding: 5rem 1rem;
+    /* background-color:yellow; */
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    height: 35vh;
+}
+header h1{
+    text-transform:uppercase;
+    font-size:3rem;
+    font-weight: bold;
+    color: crimson;
+    margin-bottom: 1.5rem;
+    word-spacing: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#new_task_form{
+    display: flex;
+}
+
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new_task_input{
+    flex: 1 1 0%;
+    padding: 1rem;
+    margin-right: 1.8rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.7);
+    background:linear-gradient((white,black));
+    color: darkblue;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#new_task_submit{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.7);
+    background-color: white;
+}
+#new_task_submit:hover{
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+}
+
+main{
+    flex: 1 1 0%;
+    max-width: 800px;
+    /* background-color: red; */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task_list{
+    padding: 1rem;
+}
+
+.task_list h2{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: wheat;
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    /* background: linear-gradient(gold); */
+    padding:1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task .content{
+    flex:1 1 0%;
+}
+
+#tasks .task .content .text{
+    color: brown;
+    font-size: 1.6rem;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: darkblue;
+}
+
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.8rem;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: .7s;
+}
+
+.task .actions button:hover{
+    opacity: 0.9;
+}
+
+.task .actions button:active{
+    opacity: 0.3;
+}
+
+.edit{
+    color: green;
+}
+
+.delete{
+    color: red;
+}
